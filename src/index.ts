@@ -10,6 +10,13 @@ import { thirdTimeAjax } from './sence/3timeAjax'
 import { abortPromise } from './sence/abortPromise'
 import { fastestApi } from './sence/fastestApi'
 import { multiFetch } from './sence/asyncMultiFetch'
+import { promiseFloat } from './sence/promiseFloat'
+import { concurrently } from './sence/concurrently'
+import { testQueue } from './sence/134'
+import { Scheduler } from './sence/promiseScedule'
+import { myPromiseAllSchedule } from './sence/schedulePromiseAll'
+import { promiseTimeOut } from './sence/promiseTimeOut'
+import { logTime } from './sence/3SecLogTime'
 async function main() {
   const test = [
     new Promise((resolve, reject) => {
@@ -93,6 +100,45 @@ async function main() {
   // fastestApi()
 
   // console.log('------------  multiFetch ----------------')
-  multiFetch()
+  // multiFetch()
+
+  // console.log('------------  promise float ----------------')
+  // promiseFloat()
+
+  // console.log('------------ concurrently  ----------------')
+  // concurrently()
+
+  // console.log('------------ promise queue  ----------------')
+  // testQueue()
+
+  // console.log('------------ Scheduler  ----------------')
+  // const sleep = (time: any) =>
+  //   new Promise((resolve) => setTimeout(resolve, time))
+
+  // // 同时进行的任务最多2个
+  // const scheduler = new Scheduler(2)
+
+  // // 添加异步任务
+  // // time: 任务执行的时间
+  // // val: 参数
+  // const addTask = (time: any, val: any) => {
+  //   scheduler.add(() => {
+  //     return sleep(time).then(() => console.log(val))
+  //   })
+  // }
+
+  // addTask(1000, '1')
+  // addTask(500, '2')
+  // addTask(300, '3')
+  // addTask(400, '4')`
+
+  // console.log('------------ promise->schedule  ----------------')
+  // myPromiseAllSchedule()
+
+  // console.log('------------promiseTimeOut  ----------------')
+  // promiseTimeOut()
+
+  // console.log('------------logTime  ----------------')
+  // logTime()
 }
 export { main }

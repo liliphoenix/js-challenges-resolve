@@ -11,4 +11,4 @@ export const fiveSecEnd = (url: any, options: any) => {
   }, 5000)
 }
 
-export const fiveSecEnd = () => {}
+

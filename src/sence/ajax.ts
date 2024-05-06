@@ -1,8 +1,7 @@
 export const myAjax = (url: string) => {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest()
-    // 第三个参数是true表示用异步函数
-    xhr.open('Get', url, true)
+    // 第三个参数是true表示用异步函数    xhr.open('Get', url, true)
     xhr.onreadystatechange = function () {
       if (this.readyState !== 4) return
       if (this.status >= 200 && this.status < 400) {
