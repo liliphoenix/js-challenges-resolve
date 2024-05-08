@@ -22,6 +22,13 @@ import { randomArr } from './js/randomArray'
 import { hundred } from './js/1-100'
 import { isSymmetryNum } from './js/isSymmetryNum'
 import { myAsyncAwait } from './js/myAsyncAwait'
+import { proxyArr } from './js/proxyArr'
+import { getAllArrEle } from './js/arrAllEquals'
+import { arrMax } from './js/arrMax'
+import { feiBerNac } from './js/feiberNatchi'
+import { myGetItem, mySetItem } from './js/LocalStorageGetItem'
+import { PalindromeNum } from './js/palindromNum'
+import { randomStr } from './js/randomStr'
 async function main() {
   const test = [
     new Promise((resolve, reject) => {
@@ -159,6 +166,30 @@ async function main() {
   // isSymmetryNum()
 
   // console.log('------------async await 源码  ----------------')
-  myAsyncAwait()
+  // myAsyncAwait()
+
+  // console.log('------------proxy arr----------------')
+  // let arr = [1, 2, 3, 4, 5]
+  // console.log(proxyArr(arr)[-1])
+
+  // console.log('------------get Arr equals Element ----------------')
+  // let arr = [11, 42, 23, 4, 5, 6, 4, 5, 6, 11, 23, 42, 56, 78, 90]
+  // getAllArrEle(arr)
+
+  // console.log('------------Arr max----------------')
+  // console.log(arrMax([11, 42, 23, 4, 5, 6, 4, 5, 6, 11, 23, 42, 56, 78, 90]))
+
+  // console.log('------------斐波那契----------------')
+  // console.log(feiBerNac(32))
+
+  // console.log('------------ myGetItem mySetItem ----------------')
+  // mySetItem('num', '123', 1)
+  // console.log(myGetItem('num'))
+
+  // console.log('------------ PalindromeNum ----------------')
+  // PalindromeNum()
+
+  // console.log('------------ random String ----------------')
+  randomStr(13)
 }
 export { main }

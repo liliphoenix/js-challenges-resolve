@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a onclick="location.href='#/'">11111</a></li>
+        <li><a href="#/admin">22222222</a></li>
+        <li><a onclick="location.href='#/server'">333333333</a></li>
+    </ul>
+    <div id="div">展示</div>
+    <script type="text/javascript">
+        let res=document.getElementById("div")
+        const Router=function(){
+            this.route={}
+            this.curUrl=''
+            this.addRoute=(path,cb)=>{
+                this.route[path]=cb||function(){}
+                console.log(this.route);
+            }
+            this.refresh=()=>{
+                this.curUrl=location.hash.split('#')[1]||'/'
+                console.log(this.route);
+                this.route[this.curUrl]()
+            }
+            let res=document.getElementById('div')
+            this.init=()=>{
+                console.log(123);
+                window.addEventListener("load",this.refresh(),false)
+                window.addEventListener("hashchange",this.refresh(),false)
+            }
+
+        }
+        const router=new Router()
+            router.addRoute("/",()=>{
+                res.style.backgroundColor='pink'
+                res.innerHTML='11111'
+            })
+            router.addRoute("/admin",()=>{
+                res.style.backgroundColor='black'
+                res.innerHTML='11111'
+            })
+            router.init()
+
+    </script>
+
+
+</body>
+</html>
