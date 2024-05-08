@@ -1,0 +1,108 @@
+/* .two-wrap .left{
+    background: black;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.two-wrap .right{
+    background: red;
+    overflow: hidden;
+    height: 200px;
+} */
+
+
+/* .two-wrap{
+    display: flex;
+    height: 200px;
+}
+.two-wrap .left{
+    background: black;
+    width: 200px;
+}
+.two-wrap .right{
+    background: red;
+    flex: 1;
+    height: 200px;
+} */
+
+
+/* .two-wrap .left{
+    background: black;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.two-wrap .right{
+    background: red;
+    margin-left: 200px;
+    height: 200px;
+}
+
+.three-wrap{
+    background: #eee;
+    overflow: hidden;
+    padding: 20px;
+    height: 200px;
+} 
+.three-wrap .left{
+    width: 200px;
+    height: 200px;
+    float: left;
+    background: coral;
+}
+.three-wrap .right{
+    width: 120px;
+    height: 200px;
+    float: right;
+    background: lightblue;
+}
+.three-wrap .mid{
+    margin-left: 220px;
+    height: 200px;
+    background: lightpink;
+    margin-right: 140px;
+} */
+/* .three-wrap{
+    position: relative;
+}
+
+.three-wrap .left{
+    width:  100px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    background: coral;
+}
+.three-wrap .right{
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    background: lightblue;
+}
+.three-wrap .mid{
+    margin: 0 110px;
+    height: 200px;
+    background: lightpink;
+}  */
+
+/* .three-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.three-wrap .left{
+    width:  100px;
+    height: 200px;
+    background: coral;
+}
+.three-wrap .right{
+    width: 100px;
+    height: 200px;
+    background: lightblue;
+}
+.three-wrap .mid{
+    height: 200px;
+    width: 100%;
+    background: lightpink;
+}   */

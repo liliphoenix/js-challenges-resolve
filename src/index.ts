@@ -17,6 +17,11 @@ import { Scheduler } from './sence/promiseScedule'
 import { myPromiseAllSchedule } from './sence/schedulePromiseAll'
 import { promiseTimeOut } from './sence/promiseTimeOut'
 import { logTime } from './sence/3SecLogTime'
+import { mySetInterval } from './sence/aa+b2a+b'
+import { randomArr } from './js/randomArray'
+import { hundred } from './js/1-100'
+import { isSymmetryNum } from './js/isSymmetryNum'
+import { myAsyncAwait } from './js/myAsyncAwait'
 async function main() {
   const test = [
     new Promise((resolve, reject) => {
@@ -140,5 +145,20 @@ async function main() {
 
   // console.log('------------logTime  ----------------')
   // logTime()
+
+  // console.log('------------mySetInterval  ----------------')
+  // mySetInterval(1000, 1000)
+
+  // console.log('------------randomArr  ----------------')
+  // randomArr(10, 2, 10)
+
+  // console.log('------------1-100 递归  ----------------')
+  // hundred()
+
+  // console.log('------------1-10000 对衬数  ----------------')
+  // isSymmetryNum()
+
+  // console.log('------------async await 源码  ----------------')
+  myAsyncAwait()
 }
 export { main }
