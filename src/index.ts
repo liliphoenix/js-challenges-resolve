@@ -29,6 +29,12 @@ import { feiBerNac } from './js/feiberNatchi'
 import { myGetItem, mySetItem } from './js/LocalStorageGetItem'
 import { PalindromeNum } from './js/palindromNum'
 import { randomStr } from './js/randomStr'
+import { judgeCamelCase } from './js/judgeCamelCase'
+import { zipStr } from './js/zipStr'
+import { MapSense } from './js/mapScence'
+import { numberLog } from './js/numberLog'
+import { replaceABC } from './js/abc'
+import { judgeString } from './js/stringJudge'
 async function main() {
   const test = [
     new Promise((resolve, reject) => {
@@ -190,6 +196,24 @@ async function main() {
   // PalindromeNum()
 
   // console.log('------------ random String ----------------')
-  randomStr(13)
+  // randomStr(13)
+
+  // console.log('------------ Camel Case ----------------')
+  // judgeCamelCase('ByteDance', 'BD')
+
+  // console.log('------------ zipStr ----------------')
+  // zipStr('aaaabbcc')
+
+  // console.log('------------ MapSense ----------------')
+  // MapSense()
+
+  //  console.log('------------ 50a6we8y20x ----------------')
+  // numberLog()
+
+  //  console.log('------------ 去除b ac ----------------')
+  replaceABC('aacbd')
+
+  //  console.log('------------ 去除b ac ----------------')
+  // judgeString(['1', new String(123)])
 }
 export { main }
