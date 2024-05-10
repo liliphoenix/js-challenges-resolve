@@ -35,6 +35,16 @@ import { MapSense } from './js/mapScence'
 import { numberLog } from './js/numberLog'
 import { replaceABC } from './js/abc'
 import { judgeString } from './js/stringJudge'
+import { bubbleSort } from './sort/bubbleSort'
+import { selectionSort } from './sort/selectionSort'
+import { tenToTwo } from './js/10->2'
+import { chartCount } from './js/charactorCount'
+import { isoscelesTriangle } from './js/isoscelesTriangle'
+import { closest } from './js/closest'
+import { noCycleGetSum } from './js/noCycleGetSum'
+import { chainedAssignment } from './js/chainedAssignment'
+import { tenOne } from './js/count10And1'
+import { arrToObject } from './js/arrToObject'
 async function main() {
   const test = [
     new Promise((resolve, reject) => {
@@ -211,9 +221,34 @@ async function main() {
   // numberLog()
 
   //  console.log('------------ 去除b ac ----------------')
-  replaceABC('aacbd')
+  // replaceABC('aacbd')
 
   //  console.log('------------ 去除b ac ----------------')
   // judgeString(['1', new String(123)])
+
+  // console.log('------------ 十进制转二进制 ----------------')
+  // tenToTwo()
+
+  // console.log('------------ 计算字符出现次数 ----------------')
+  // chartCount('132123125444hhhhh666')
+
+  // console.log('------------ 等腰三角形 ----------------')
+  // isoscelesTriangle(5)
+
+  // console.log('------------ 求最接近的值  ----------------')
+  // closest()
+
+  // console.log('------------ 不用循环求和  ----------------')
+  // noCycleGetSum()
+  //console.log('------------ 连等赋值c  ----------------')
+  // chainedAssignment()
+  //console.log('------------ 10个1  ----------------')
+  // tenOne()
+  //console.log('------------  ['zm', 'za', 'b', 'lm', 'ln', 'k']  ----------------')
+  arrToObject()
+  // console.log('------------ 冒泡 ----------------')
+  // bubbleSort([4, 51, 2, 4, 56, 56, 7, 43, 55])
+  // console.log('------------ 选择 ----------------')
+  // selectionSort([4, 51, 2, 4, 56, 56, 7, 43, 55])
 }
 export { main }
