@@ -45,6 +45,13 @@ import { noCycleGetSum } from './js/noCycleGetSum'
 import { chainedAssignment } from './js/chainedAssignment'
 import { tenOne } from './js/count10And1'
 import { arrToObject } from './js/arrToObject'
+import { chainedArr } from './js/chainedArr'
+import { stringCount } from './js/stringCount'
+import { removeEmptyProperties } from './js/emptyProperty'
+import { judgeObjectEquals } from './js/judgeObjectEquals'
+import { primeNum } from './js/primeNumber'
+import { format } from 'path'
+import { formatTime } from './js/formatTime'
 async function main() {
   const test = [
     new Promise((resolve, reject) => {
@@ -245,7 +252,20 @@ async function main() {
   //console.log('------------ 10个1  ----------------')
   // tenOne()
   //console.log('------------  ['zm', 'za', 'b', 'lm', 'ln', 'k']  ----------------')
-  arrToObject()
+  // arrToObject()
+  // console.log('------------  ["0->2", "4->5", "7", "13", "15->16"]  ----------------')
+  // chainedArr()
+  // console.log('------------  ['ab', 'c', 'ab', 'd', 'c']  ----------------')
+  // stringCount()
+  // console.log('------------ 移除空属性  ----------------')
+  // removeEmptyProperties({ a: { a: null }, b: '哈哈哈' })
+  // console.log('------------ 判断两个对象是否相等  ----------------')
+  // judgeObjectEquals({ a: '11', b: { c: '22' } }, { a: '11', b: { c: '22' } })
+  // console.log('------------ 素数  ----------------')
+  // console.log(primeNum(201))
+  // console.log('------------ 实现日期格式化函数  ----------------')
+  formatTime(new Date(), 'YYYY-MM-DD HH:mm:ss')
+
   // console.log('------------ 冒泡 ----------------')
   // bubbleSort([4, 51, 2, 4, 56, 56, 7, 43, 55])
   // console.log('------------ 选择 ----------------')

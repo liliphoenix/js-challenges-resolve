@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+
+    <div></div>
+
+
+    <div></div>
+
+
+    <script>
+        const allDoms=Array.from(document.querySelectorAll("*"))
+        console.log(allDoms);
+        const map=new Map()
+        allDoms.forEach(item=>{
+            if(map.has(item.localName)){
+                map.set(item.localName,map.get(item.localName)+1)
+            }else{
+                map.set(item.localName,1)
+            }
+        })
+        
+        const arr=Array.from(map).sort((a,b)=>{
+            return b[1]-a[1]
+        })
+        console.log(arr[0][0],arr[1][0],arr[2][0]);
+    </script>
+</body>
+</html>

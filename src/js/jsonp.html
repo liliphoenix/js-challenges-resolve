@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const getJsonpData=(url,params,cbName)=>{
+            return new Promise(resolve=>{
+                const tag=document.createElement("script")
+                const arr=Object.entries(params).map(item=>`${item[0]}=${item[1]}`)
+                console.log(arr);
+                const resUrl=`${url}?${arr.join("&")}`
+                console.log(resUrl);
+
+                tag.src=resUrl
+                document.body.appendChild(tag)
+                window[cbName]=(data)=>{
+                    resolve(data)
+                    console.log(data);
+                    document.body.removeChild(tag)
+                }
+            })
+        }
+        getJsonpData('https://www.baidu.com/',{a:1,b:2},'abc').then(res=>{
+            console.log(res);
+        })
+        window.abc()
+
+    </script>
+</body>
+</html>
