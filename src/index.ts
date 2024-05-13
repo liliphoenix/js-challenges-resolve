@@ -52,6 +52,13 @@ import { judgeObjectEquals } from './js/judgeObjectEquals'
 import { primeNum } from './js/primeNumber'
 import { format } from 'path'
 import { formatTime } from './js/formatTime'
+import { reverse } from 'dns'
+import { reverseUrl } from './js/reverseUrl'
+import { paramsToObject } from './js/paramsToObj'
+import { generateFun } from './js/generateColor'
+import { clearArr } from './js/clearArr'
+import { mergeObject } from './js/mergeObject'
+import { infinityArr } from './js/infinetyArr'
 async function main() {
   const test = [
     new Promise((resolve, reject) => {
@@ -264,7 +271,25 @@ async function main() {
   // console.log('------------ 素数  ----------------')
   // console.log(primeNum(201))
   // console.log('------------ 实现日期格式化函数  ----------------')
-  formatTime(new Date(), 'YYYY-MM-DD HH:mm:ss')
+  // formatTime(new Date(), 'YYYY-MM-DD HH:mm:ss')
+  // console.log('------------ 反转url  ----------------')
+  // reverseUrl('www.baidu.toutiao.com')
+  // console.log('------------ 解析 URL Params 为对象  ----------------')
+  // paramsToObject()
+  // console.log('------------ 生成颜色  ----------------')
+  // console.log(generateFun())
+  // console.log('------------ 清空数组  ----------------')
+  // clearArr()
+  // console.log('------------ 合并数组  ----------------')
+  // mergeObject()
+  // console.log('------------ 数组无限延伸  ----------------')
+  const arr = infinityArr()
+  console.log(arr.next())
+  console.log(arr.next())
+  console.log(arr.next())
+
+  infinityArr().next()
+  infinityArr().next()
 
   // console.log('------------ 冒泡 ----------------')
   // bubbleSort([4, 51, 2, 4, 56, 56, 7, 43, 55])
