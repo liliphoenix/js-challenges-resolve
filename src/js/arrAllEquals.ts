@@ -15,6 +15,5 @@ export const getAllArrEle = (arr: any[]) => {
       res[0].sum += ele
       res[0].arr.push(ele)
     })
-
   console.log(res)
 }

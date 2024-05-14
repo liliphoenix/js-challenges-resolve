@@ -67,6 +67,9 @@ import { isCycleObject } from './js/isCycleObject'
 import { objectFlat } from './js/reverseObjectFlat'
 import { objectFlat2 } from './js/objectFlat'
 import { OnceFun } from './js/OnceFun'
+import { chainedFun } from './js/chainedFun'
+import { partialFun } from './js/partial'
+import { getType } from './js/getType'
 async function main() {
   const test = [
     new Promise((resolve, reject) => {
@@ -313,12 +316,24 @@ async function main() {
   // console.log('------------ 对象扁平 ----------------')
   // objectFlat2()
   // console.log('------------ 只调用一次  ----------------')
-  function sayHi() {
-    console.log('hi!')
-  }
-  const sayOnce = OnceFun(sayHi)
-  sayOnce()
-  sayOnce()
+  // function sayHi() {
+  //   console.log('hi!')
+  // }
+  // const sayOnce = OnceFun(sayHi)
+  // sayOnce()
+  // sayOnce()
+  // console.log('------------ 链式调用  ----------------')
+  // const obj = chainedFun()
+  // console.log(obj.add(123).add(234).count)
+  // console.log('------------ 偏函数  ----------------')
+  // const b = (a: any, v: any, b: any) => {
+  //   console.log(a, v, b)
+  // }
+  // const a = partialFun(b, 12)
+  // a(3, 5)
+  // console.log('------------ 管道函数  ----------------')
+  // console.log('------------ 获取类型  ----------------')
+  // getType()
   // console.log('------------ 冒泡 ----------------')
   // bubbleSort([4, 51, 2, 4, 56, 56, 7, 43, 55])
   // console.log('------------ 选择 ----------------')

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="">
+    <script>
+        const images=document.querySelectorAll("img")
+        const observer=new IntersectionObserver((entries,observer)=>{
+            entries.forEach((entry)=>{
+                if(entry.isIntersecting){
+                    entry.target.src=entry.target.dataset.src
+                observer.unobserve(entry)
+                }
+            })
+        })
+        images.forEach(item=>{
+            observer.observe(item)
+        })
+    </script>
+</body>
+</html>
