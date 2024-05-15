@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+    <script>
+        const dom=document.querySelector("div")
+        let route=0.1
+
+        const animationInfinity=()=>{
+            route+=0.1
+            dom.style.transform=`rotate${route}rad`
+            requestAnimationFrame(animationInfinity)
+        }
+        requestAnimationFrame(animationInfinity)
+    </script>
+</body>
+</html>

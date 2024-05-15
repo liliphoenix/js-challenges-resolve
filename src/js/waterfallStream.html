@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            position: relative;
+        }
+        .main div{
+            width: 100px;
+            float: left;
+            padding: 15px 0 0 15px;
+            border: 1px solid #ccc;
+        }
+        .line-one{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box line-one">1</div>
+        <div class="box line-one">1</div>
+        <div class="box line-one">1</div>
+        <div class="box line-one">1</div>
+        <div class="box line-two">2</div>
+        <div class="box line-two">2</div>
+        <div class="box line-two">2</div>
+        <div class="box line-two">2</div>
+        <div class="box line-three">3</div>
+        <div class="box line-three">3</div>
+        <div class="box line-three">3</div>
+        <div class="box line-three">3</div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="box"></div>
+
+
+        <div class="box"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+    <script>
+        const allBoxes=document.querySelectorAll(".box")
+        const father=document.querySelector(".main")
+        const screen=document.documentElement.clientWidth||document.body.clientWidth
+        const width=allBoxes[0].offsetWidth
+        const cols=parseInt(screen/width)
+        father.style.width=cols*width+'px'
+        father.style.margin = '0 auto';
+        let heightArr=[]
+        let minWidth=''
+        let minIndex=0
+        const minOne=(arr)=>{
+            let j=0
+            arr.forEach((item,i)=>{
+                if(item<arr[j]){
+                    j=i
+                }
+            })
+            return j
+        }
+        allBoxes.forEach((item,index)=>{
+            if(index<cols){
+                heightArr.push(item.offsetHeight)
+            }else{
+                // 取出最小的
+                const minHeight=heightArr[minOne(heightArr)]
+                const minIndex=minOne(heightArr)
+                allBoxes[index].style.position = 'absolute';
+                allBoxes[index].style.left=minIndex*width+'px'
+                allBoxes[index].style.top=minHeight+'px'
+                heightArr[minIndex]+=minHeight
+            }
+        })
+
+    </script>
+</body>
+</html>
