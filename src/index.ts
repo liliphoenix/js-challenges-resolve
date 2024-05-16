@@ -70,6 +70,9 @@ import { OnceFun } from './js/OnceFun'
 import { chainedFun } from './js/chainedFun'
 import { partialFun } from './js/partial'
 import { getType } from './js/getType'
+import { stringHasStr } from './js/stringHasStr'
+import { stringToNum } from './js/stringToNum'
+import { LazyMan } from './js/LazyMan'
 async function main() {
   const test = [
     new Promise((resolve, reject) => {
@@ -334,6 +337,13 @@ async function main() {
   // console.log('------------ 管道函数  ----------------')
   // console.log('------------ 获取类型  ----------------')
   // getType()
+  // console.log('------------ 获取类型  ----------------')
+  // console.log('------------ 一个字符串中是否出现某串字符,出现的话返回索引  ----------------')
+  // console.log(stringHasStr('abdgdugjdog', 'bdg'))
+  // console.log('------------ 字符串转数字  ----------------')
+  // stringToNum()
+  //  console.log('------------  Lazy Man  ----------------')
+  LazyMan()
   // console.log('------------ 冒泡 ----------------')
   // bubbleSort([4, 51, 2, 4, 56, 56, 7, 43, 55])
   // console.log('------------ 选择 ----------------')
